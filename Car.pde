@@ -14,7 +14,7 @@ class Car {
     positionX=x;
     positionY=y;
     parkTime= int(random(1, 12));//Number of hours the car will stay in the lot (Between 4 and 9 hours)
-    speed=3;
+    speed=2;
     if (int(random(1, 4))<=2)//If random number between 1 and 3 is either 1 or 2, then the car will park in the lot, if number is 3 then the car will not park in lot
       willPark=true;
     else willPark=false;
@@ -31,7 +31,7 @@ class Car {
 
     if (willPark&& positionX==480 && !inLot && !leftLot&&enterGate.counter!=60) {//If parking car is at the top of the parking lot then it will turn in and drive in
       driveIn();
-      if (willPark && positionX==480 && positionY==101) {//Once it is in the lot then the car will be hidden then it will choose its stall & set it to occupied
+      if (willPark && positionX==480 && positionY>=101) {//Once it is in the lot then the car will be hidden then it will choose its stall & set it to occupied
 
         inLot=true;//CAR IS IN LOT
         cP.customers++;
@@ -85,6 +85,8 @@ class Car {
     positionY+=speed;
     fill(c);
     rect(positionX, positionY, 20, 50);
+       
+
   }
 
 
@@ -101,11 +103,16 @@ class Car {
   void driveThrough() {//function to drive a car driving left through the street, not entering the lot, or after it has exited the lot. (willPark has value where the car will not go in lot)
     if(!leftLot){
     positionY=50;
+    if(willPark){
+      fill(255);
+        text("Parking",positionX+5,positionY-10);
+}
     }
     if(leftLot){
     positionY=700;
     }
     positionX+=speed;
+    fill(c);
     rect(positionX, positionY, 50, 20);
   }
 

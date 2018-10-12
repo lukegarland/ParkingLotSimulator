@@ -1,12 +1,12 @@
 class Street {
-  String a;
+
   int b;
   int c;
 
-Street(int x, int y, String s) {
+Street(int x, int y) {
   b = x;
   c = y;
-  a = s; 
+
 
 }
 

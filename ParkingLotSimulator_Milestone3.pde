@@ -1,14 +1,9 @@
-//To do list:
-//Set stalls to occupied/open (Car)
-//Drive functions/Displaying cars (Car)
-//Control Panel
 
-String north, south;
 int stallWidth=60; 
 int stallHeight=40;
-Street sstr = new Street(0, 675, south);
-Street cstr = new Street(460, 0, " ");
-Street nstr = new Street(0, 0, north);
+Street sstr = new Street(0, 675);
+Street cstr = new Street(460, 0);
+Street nstr = new Street(0, 0);
 ParkingLot pLot =  new ParkingLot(150, 200, stallWidth, stallHeight);//100,100 is location of the first lot; 
 Gate exitGate = new Gate(360, 595, "Exit");
 Gate enterGate = new Gate(360, 105, "Entrance");
@@ -16,6 +11,7 @@ Date presentDate= new Date(6, 0, 0, true);
 Car carArray[]=new Car[1];
 ControlPanel cP= new ControlPanel();
 int timeCounter=0;
+boolean pause= false;
 void settings() {
   size(1200, 800);
 }
@@ -26,8 +22,10 @@ void setup() {
 }
 
 void draw() {
+  if(timeCounter%4==0){
   presentDate.addMinute();
   cP.time++;
+  }
   drawbackground();
 timeCounter+=1;
   if (random(0, 30)<=2&& timeCounter>30) {
@@ -62,4 +60,15 @@ boolean dateEquals(Date a, Date b ) {//Compares two dates and returns true if th
   if (a.today==b.today && a.hour==b.hour && a.minute==b.minute && a.before_noon==b.before_noon) {
     return true;
   } else return false;
+}
+
+void mousePressed(){
+  
+ if(!pause){
+ noLoop();
+ pause=true;
+ }else{
+ loop();
+ pause=false;
+ }
 }
