@@ -14,7 +14,7 @@ class Car {
     positionX=x;
     positionY=y;
     parkTime= int(random(1, 12));//Number of hours the car will stay in the lot (Between 4 and 9 hours)
-    speed=20;
+    speed=2;
     if (int(random(1, 4))<=2)//If random number between 1 and 3 is either 1 or 2, then the car will park in the lot, if number is 3 then the car will not park in lot
       willPark=true;
     else willPark=false;
