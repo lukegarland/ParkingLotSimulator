@@ -7,7 +7,8 @@ class ParkingLot {
   int loty;
 
 
-  ParkingLot(int a, int b, int c, int d) {
+  ParkingLot(int a, int b, int c, int d) 
+  {
 
     lotx=a;
     loty=b;
@@ -16,8 +17,10 @@ class ParkingLot {
 
 
 //Setting the coordinates of each section
-    for (int i =0; i<3; i++) {
-      for (int j=0; j<2; j++) {
+    for (int i =0; i<3; i++) 
+    {
+      for (int j=0; j<2; j++) 
+      {
         section[i][j]= new ParkingStallSection(lotx, loty, c, d);//50 are width and height of the stall
         lotx+=395;
       }
@@ -25,10 +28,12 @@ class ParkingLot {
       lotx=a;
     }
   }
-  void drawLot() {
-    for (int i=0; i<3; i++) {
-      for (int j=0; j<2; j++) {
-
+  void drawLot() 
+  {
+    for (int i=0; i<3; i++) 
+    {
+      for (int j=0; j<2; j++) 
+      {
         section[i][j].drawSection();//draws each section
       }
     }

@@ -10,7 +10,8 @@ class ParkingStall {
   float posX;
   float posY;
 
-  ParkingStall(float x, float y, float w, float h) {
+  ParkingStall(float x, float y, float w, float h)
+  {
     occupied = false;
     posX = x;
     posY = y;
@@ -18,7 +19,8 @@ class ParkingStall {
     stallHeight = h;
   }
 
-  void drawStall() {
+  void drawStall() 
+  {
     if (occupied)
       fill(color(255, 90, 71)); // RED STALL
     else
