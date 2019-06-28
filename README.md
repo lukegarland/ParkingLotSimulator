@@ -1,19 +1,19 @@
 # Parking Lot Simulator
-This was the final project for Engineering 223, Computing for Engineers I, at the University of Calgary. The program was developed in [Processing 3](https://processing.org/).
+This was the final project for Engineering 223, Computing for Engineers I, at the University of Calgary (Fall 2017). The program was developed in [Processing 3](https://processing.org/).
 
 ## Summary
-The main purpose is to simulate the behaviour of a paid parking lot.  If there is space in the lot, some cars driving along the top street will enter the lot and select an open parking space. Open parking spaces are green, and spaces that are currently occupied are red. After a random amount of time, the car will to leave the lot, and pay the required fee. Price calculations are rounded up to the next hour.
+The main purpose is to simulate the behaviour of a paid parking lot.  If there is space in the lot, some cars driving along the top street will enter the lot and select an open parking space. Open parking spaces are green, and spaces that are currently occupied are red. After a random amount of time, the car will leave the lot, and pay the required fee. Price calculations are rounded up to the next hour.
 
 The total revenue that the lot generates is displayed on the right panel. The total number of customers, and hours elapsed since the start are also displayed.
 
-When the lot is full, the entrance gate will close and display "LOT FULL". No more cars will park until cars leave, and space becomes available.
+When the lot is full, the entrance gate will close and display "LOT FULL". No more cars will park until a car leaves, and a parking space become available.
 
-Pressing anywhere on the application will pause/resume the simulation.
+A mouse click anywhere on the application window will pause/resume the simulation.
 
 
 ## Releases
 
-See the current [release](https://github.com/lukegarland/ParkingLotSimulator/releases) for executable files (Windows and Linux). Download the package and run ```ParkingLotSimulator``` from inside the application folder.
+See the current [release](https://github.com/lukegarland/ParkingLotSimulator/releases) for executable files. Download the package and run ```ParkingLotSimulator``` from inside the application folder.
 
 ## Screenshots
 
